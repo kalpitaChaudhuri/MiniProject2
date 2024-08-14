@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #8E4585; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #4F2648; 
+}
+
+.btn:active {
+    background-color: plum; 
+}
+
+.btn:focus {
+    outline: none;
+}
+</style>
+</head>
+<body>
+<div class="button-container">
+<form action="profile"  method="get">
+<button class="btn">Profile</button>
+</form>
+<a href="Login.html"><button class="btn">Logout</button></a>
+ </div>
+</body>
+</html>
