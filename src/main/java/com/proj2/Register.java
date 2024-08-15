@@ -40,7 +40,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 		ps.setLong(6, mobile);
 		int i=ps.executeUpdate();
 		if(i>0) {
-			out.println("<h3>Registration Success</h3>");
+			out.println("<h1>Registration Success</h1>");
 			RequestDispatcher dispatcher=req.getRequestDispatcher("Login.html");
 			dispatcher.forward(req, resp);
 		}

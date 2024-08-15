@@ -20,6 +20,7 @@ public class Profile extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email=null;
+		resp.setContentType("text/html");
 		Cookie[] cookies = req.getCookies();
 		if(cookies!=null) {
 			for(Cookie c: cookies) {
@@ -35,7 +36,6 @@ public class Profile extends HttpServlet {
 				ps.setString(1, email);
 				ResultSet rs = ps.executeQuery();
 				if (rs.next()) {
-					resp.setContentType("text/html");
 					resp.getWriter().println("<h1>Profile Page</h1>");
 					resp.getWriter().println("<br>Name: " + rs.getString("name") + "<br>");
 					resp.getWriter().println("<br>Email: " + rs.getString("email") + "<br>");
@@ -51,3 +51,4 @@ public class Profile extends HttpServlet {
 		}
 	}
 }
+

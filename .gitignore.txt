@@ -1,15 +1,15 @@
 # Ignore binary files
-*.class
-*.jar
-*.war
+.class
+.jar
+.war
 
 # Ignore directories
-bin/
-target/
-build/
+bin
+target
+build
 
 # Ignore Eclipse-specific files
-.settings/
+.settings
 .classpath
 .project
 

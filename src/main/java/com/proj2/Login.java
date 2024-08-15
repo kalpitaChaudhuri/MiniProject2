@@ -34,7 +34,6 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 		ResultSet rs=ps.executeQuery();
 		if(rs.next()) {
             Cookie c = new Cookie("email", email);
-            c.setMaxAge(10); 
             resp.addCookie(c);
 			req.getRequestDispatcher("Home.html").forward(req, resp);
 		}else {
